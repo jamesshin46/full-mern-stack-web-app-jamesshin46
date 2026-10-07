@@ -78,5 +78,19 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching the About Us Page
+app.get('/about', (req, res) => {
+  res.json({
+    title: 'About Us',
+    paragraphs: [
+      'Hello! My name is James Shin and I am a Senior at NYU studying Business (Concentrations in Finance and Data Science @ Stern) and Computer Science. I was born and raised in New York, NY and I am Korean American.',
+      'More on my background - my parents are immigrants so I speak Korean at home and church but English at school or with my friends. Professionally, I am interested in working within the intersection of business and technology, ranging from product management, software engineering, consulting, and more. I am taking this class specifically because I have been interested in product management and working on the technical side of it, so I thought that this would be great experience to learn what a true dev environment looks like.',
+      'Outside of school, I enjoy dance, as I am in a competitive dance team and e-board for the k-pop dance club at school, music, specifically piano and guitar, cafe hopping, working out, and eating as an avid Beli user.',
+    ],
+    imageUrl:
+      'https://drive.google.com/thumbnail?id=1we9XNeWGrQhSV6FCzKrcad-sArrgF7cx&sz=w1000',
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
